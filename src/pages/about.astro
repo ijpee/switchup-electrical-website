@@ -1,6 +1,6 @@
 ---
 import MainLayout from '../layouts/main-layout.astro'
-import QuoteText from '../components/quote.tsx'
+import Logo from '../icons/logo.tsx';
 import  Facebook  from '../icons/facebook.tsx';
 import  Twitter  from '../icons/twitter.tsx';
 import  LinkedIn  from '../icons/linkedin.tsx';
@@ -20,10 +20,13 @@ import Instagram  from '../icons/instagram.tsx';
     </div>
   </section>
 
-  <!-- Quote Section -->
+  <!-- Introduction Section -->
 
   <section class="w-full px-12 lg:px-0 pt-[100px] lg:pt-[200px] lg:max-w-[1200px] mx-auto flex items-center justify-center">
-    <QuoteText text="Excellence is not an act, but a habit. Every installation, every connection, every project—we bring 15+ years of expertise to power your vision." name="SWITCHUP ELECTRICAL"/>
+    <div class="flex flex-col items-center gap-6">
+      <Logo client:load />
+      <p class="text-center text-lg font-montserrat text-text-secondary max-w-[600px]">Switchup Electrical: Powering Auckland with expertise, safety, and innovation.</p>
+    </div>
   </section>
 
   <!-- What We Do Section -->
