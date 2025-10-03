@@ -4,18 +4,18 @@ import Web from "../icons/web.tsx";
 
 const ContactInfo = () => {
   return (
-    <div className="col-span-1 bg-primary-300 rounded-[30px] px-8 py-[76px] flex flex-col gap-[30px] w-full">
-      <h5 className="flex flex-col xl:flex-row gap-4 items-center text-xl font-jost tracking-tight">
+    <div className="col-span-1 bg-gray-50 rounded-[30px] px-8 py-[76px] flex flex-col gap-[30px] w-full shadow-lg">
+      <a href="mailto:admin@switchupelectrical.co.nz" className="flex flex-col xl:flex-row gap-4 items-center text-xl font-montserrat tracking-tight hover:text-primary-200 transition-colors">
         {" "}
-        <Mail /> info@yourdomain.com
-      </h5>
-      <h5 className="flex flex-col xl:flex-row gap-4 items-center text-xl font-jost tracking-tight">
+        <Mail /> admin@switchupelectrical.co.nz
+      </a>
+      <a href="tel:0211396512" className="flex flex-col xl:flex-row gap-4 items-center text-xl font-montserrat tracking-tight hover:text-primary-200 transition-colors">
         {" "}
-        <Phone /> +1 (378) 400-1234
-      </h5>
-      <h5 className="flex flex-col xl:flex-row gap-4 items-center text-xl font-jost tracking-tight">
+        <Phone /> 0211396512
+      </a>
+      <h5 className="flex flex-col xl:flex-row gap-4 items-center text-xl font-montserrat tracking-tight text-text-secondary">
         {" "}
-        <Web /> www.yourdomain.com
+        <Web /> Auckland Wide Service
       </h5>
     </div>
   );

@@ -14,23 +14,28 @@ module.exports = {
         contact: "url('/contactpage-bg.jpg')",
       },
       fontFamily: {
-        dm: ["DM Serif Display", "serif"],
-        jost: ["Jost", "sans-serif"], // Ensure fonts with spaces have " " surrounding it.
+        montserrat: ["Montserrat", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"], // Extra Bold for headings
       },
       colors: {
-        // Configure your color palette here
+        // Switchup Electrical Brand Colors
         primary: {
-          100: "#CDA274",
-          200: "#292F36",
-          300: "#F4F0EC",
-          400: "#E2E2E2",
+          100: "#FF6B47", // Light Orange
+          200: "#FF5722", // Brand Orange
+          300: "#1A1A1A", // Dark Background
+          400: "#2A2A2A", // Medium Dark
+        },
+        secondary: {
+          100: "#BCB4AF", // Light Gray
+          200: "#938A83", // Medium Gray
+          300: "#6B6660", // Dark Gray
+          400: "#4D413E", // Darkest Gray
         },
         text: {
-          blue: "#1B2534",
-          gray: "#4D4F52",
-          "gray-100": "#5F5F5F",
-          "gray-200": "#4D5053",
-          "gray-300": "#E5E5E5",
+          primary: "#1A1A1A", // Dark text
+          secondary: "#4D413E", // Gray text
+          light: "#938A83", // Light gray text
+          white: "#FFFFFF",
         },
       },
     },

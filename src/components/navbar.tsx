@@ -7,7 +7,7 @@ const Navbar = () => {
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(min-width: 1280px)");
 
-  const linkStyle = "text-xl leading-6 font-jost text-primary-200";
+  const linkStyle = "text-lg leading-6 font-montserrat font-semibold text-text-primary hover:text-primary-200 transition-colors";
 
   return (
     <div className="max-w-[1200px] px-12 xl:px-0 m-auto w-full py-11 flex justify-between items-center">
@@ -41,11 +41,11 @@ const Navbar = () => {
         >
           <motion.span
             animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
-            className="block h-0.5 w-8 bg-black"
+            className="block h-0.5 w-8 bg-primary-200"
           ></motion.span>
           <motion.span
             animate={{ width: toggled ? 0 : 24 }}
-            className="block h-0.5 w-6 bg-black"
+            className="block h-0.5 w-6 bg-primary-200"
           ></motion.span>
           <motion.span
             animate={{
@@ -53,7 +53,7 @@ const Navbar = () => {
               y: toggled ? -8 : 0,
               width: toggled ? 32 : 16,
             }}
-            className="block h-0.5 w-4 bg-black"
+            className="block h-0.5 w-4 bg-primary-200"
           ></motion.span>
         </div>
       )}
