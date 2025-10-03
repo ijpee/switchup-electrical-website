@@ -4,7 +4,7 @@ import Button from "./button.tsx";
 const ContactForm = () => {
   return (
     <div className="col-span-1 lg:col-span-2">
-      <form className="w-full grid grid-cols-2 gap-x-10 gap-y-[50px]">
+      <form action="https://formspree.io/f/xdkwzbkl" method="POST" className="w-full grid grid-cols-2 gap-x-10 gap-y-[50px]">
         <label htmlFor="name">
           <input
             type="text"
@@ -28,7 +28,7 @@ const ContactForm = () => {
             type="text"
             name="subject"
             className="col-span-1 border-b w-full border-secondary-200 outline-none py-3 text-base lg:text-lg lg:leading-[33px] tracking-tight font-montserrat text-text-secondary focus:border-primary-200 transition-colors"
-            placeholder="Service Type (EV Charger, Pool, Smart Home, etc.)"
+            placeholder="Service Type"
           />
         </label>
         <label htmlFor="phone">
