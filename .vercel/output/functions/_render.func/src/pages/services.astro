@@ -1,0 +1,157 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+import One from "../icons/one.tsx"
+import Two from "../icons/two.tsx"
+import Three from "../icons/three.tsx"
+import Four from "../icons/four.tsx"
+import ServiceIconOne from "../icons/service1-icon.tsx"
+import ServiceIconTwo from "../icons/service2-icon.tsx"
+import ServiceIconThree from "../icons/service3-icon.tsx"
+import ServiceIconFour from "../icons/service4-icon.tsx"
+
+
+const services = [
+	{
+		title: 'EV Charger Installation',
+		text: 'Professional installation of all major EV charger brands including Tesla, Zappi, and more. Smart connectivity and load management options available.'
+	},
+	{
+		title: 'Pool & Spa Electrical',
+		text: 'Complete electrical solutions for pools, spas, and saunas. Heating systems, pumps, lighting, and safety compliance all handled expertly.'
+	},
+	{
+		title: 'Smart Home Systems',
+		text: 'Transform your home with intelligent lighting, automated controls, and integrated IoT systems. Modern living made effortless.'
+	},
+	{
+		title: 'Switchboard Upgrades',
+		text: 'Modernize your electrical panel for safety and capacity. Essential for adding new circuits, EV chargers, or upgrading older homes.'
+	},
+	{
+		title: 'Commercial Electrical',
+		text: 'Shop fit-outs, office lighting, data infrastructure, and maintenance contracts. Professional service for Auckland businesses.'
+	},
+	{
+		title: 'New Builds & Renovations',
+		text: 'Complete electrical design and installation for new construction and major renovations. From concept to final inspection.'
+	},
+]
+
+const howWeWorkDetails = [
+  {
+    imgIcon: ServiceIconOne,
+    numIcon: One,
+    img: '/service1.png',
+    title: 'Consultation & Quote',
+    info:'We start with a thorough assessment of your needs. Whether it\'s an EV charger, pool electrical, or smart home system, we provide detailed quotes and expert recommendations tailored to your project.'
+
+  },
+  {
+    imgIcon: ServiceIconTwo,
+    numIcon: Two,
+    img: '/service2.png',
+    title: 'Design & Planning',
+    info:'Our team creates a comprehensive electrical plan that meets all safety codes and your specific requirements. We handle permits, compliance, and coordinate with other trades if needed.'
+
+  },
+  {
+    imgIcon: ServiceIconThree,
+    numIcon: Three,
+    img: '/service3.png',
+    title: 'Professional Installation',
+    info:'Licensed electricians execute the work with precision and care. We use quality materials, follow best practices, and keep your property clean and tidy throughout the installation process.'
+
+  },
+  {
+    imgIcon: ServiceIconFour,
+    numIcon: Four,
+    img: '/service4.png',
+    title: 'Testing & Certification',
+    info:'Every installation undergoes rigorous testing and certification. We provide all necessary documentation, warranties, and a full walkthrough to ensure you\'re confident with your new electrical system.'
+
+  },
+]
+---
+
+
+<MainLayout title = 'Our Services - Switchup Electrical | EV Chargers, Smart Homes, Pool Electrical'>
+
+  <!-- Banner Section -->
+
+  <section class="w-full bg-services h-[50vh] flex justify-center items-end">
+    <div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
+      <h1 class="text-[30px] leading-[40px] lg:text-[50px] lg:leading-[62px] font-heading font-bold capitalize text-text-primary ">Our Services</h1>
+      <p class="text-base lg:text-lg lg:leading-[33px] tracking-tight font-montserrat text-text-secondary"> <a href="/" class="hover:text-primary-200">Home</a> / Services </p>
+    </div>
+  </section>
+
+  	<!-- Services Section -->
+
+	<section class="lg:max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 lg:gap-y-12 px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] justify-between ">
+		{
+			services.map((service) => {
+				return (
+					<div class="w-full col-span-1 max-w-[358px] mx-auto flex rounded-[30px] hover:bg-gray-50 hover:shadow-lg transition-all duration-300 px-5 py-[83px] flex-col justify-center items-center gap-3 md:gap-5">
+						<h3 class="text-text-primary font-heading font-bold text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-lg tracking-tight font-montserrat text-text-secondary leading-[33px] text-center"> {service.text}</p>
+						
+					</div>
+				)
+			})
+		}
+	</section>
+
+  <!-- How We Work Section -->
+  <section class="px-12 xl:px-0 w-full mt-[100px] lg:mt-[200px] min-h-screen ">
+   <div class="w-full lg:max-w-[1200px] p-12 mx-auto lg:px-[116px] lg:py-[160px] bg-gray-50 rounded-[70px] ">
+     <h2 class="font-heading font-bold tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full capitalize lg:max-w-[60%] pb-2 mx-auto text-text-primary">Our Process</h2>
+		<p class="text-base md:text-lg text-center tracking-tight font-montserrat text-text-secondary leading-[33px] lg:max-w-[70%] mx-auto">From initial consultation to final certification, we ensure every project is completed to the highest standards with clear communication every step of the way.</p>
+
+    <div class="pt-[70px] lg:pt-[100px] flex flex-col gap-[70px] ">
+      <!-- Inner Sections -->
+
+      {
+        howWeWorkDetails.map((detail, index) => {
+          const ImageIcon = detail.imgIcon
+          const NumberIcon = detail.numIcon
+          const className = `flex justify-between flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-[50px] items-center max-w-[967px]`
+
+          return(
+            <div class={className}>
+              <img src={detail.img} alt=""/>
+              <div class="flex flex-col gap-12 lg:gap-[58px]">
+                <div class="justify-between hidden lg:flex">
+                  <ImageIcon />
+                  <NumberIcon/>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <h3 class="text-text-primary font-heading font-bold text-[22px] md:text-[25px] leading-loose">{detail.title}</h3>
+                  <p class="text-base md:text-lg tracking-tight font-montserrat text-text-secondary leading-[33px]">{detail.info}</p>
+                </div>
+              </div>
+            </div>
+          )
+        })
+      }
+
+      <!-- Inner Sections End -->
+    </div>
+   </div>
+  </section>
+
+</MainLayout>
+
+<style>
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+</style>
