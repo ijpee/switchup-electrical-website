@@ -7,5 +7,14 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({
+    includeFiles: [],
+    excludeFiles: [],
+  }),
+  vite: {
+    ssr: {
+      external: [],
+      noExternal: ['react', 'react-dom'],
+    },
+  },
 });

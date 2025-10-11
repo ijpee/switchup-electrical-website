@@ -1,7 +1,7 @@
-import { jsx, jsxs } from 'react/jsx-runtime';
+import { j as jsxRuntimeExports } from './main-layout_DvV2Yj8j.mjs';
 
 const ArrowSec = () => {
-  return /* @__PURE__ */ jsx(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "svg",
     {
       width: "19",
@@ -9,7 +9,7 @@ const ArrowSec = () => {
       viewBox: "0 0 19 17",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      children: /* @__PURE__ */ jsx(
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         "path",
         {
           d: "M2 8.43536L15.7232 8.29851M10.6182 1.91132L17.1412 8.4343L10.4868 15.0887",
@@ -24,7 +24,7 @@ const ArrowSec = () => {
 };
 
 const ArrowPri = () => {
-  return /* @__PURE__ */ jsx(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "svg",
     {
       width: "19",
@@ -32,7 +32,7 @@ const ArrowPri = () => {
       viewBox: "0 0 19 17",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      children: /* @__PURE__ */ jsx(
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         "path",
         {
           d: "M2 8.43536L15.7232 8.29851M10.6182 1.91132L17.1412 8.4343L10.4868 15.0887",
@@ -58,14 +58,14 @@ const Button = (props) => {
   const bgClass = variant === "primary" ? "bg-primary-200" : "bg-primary-300";
   const className = `${defaultStyles} ${bgClass}`;
   if (href) {
-    return /* @__PURE__ */ jsxs("a", { href, className, onClick, children: [
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href, className, onClick, children: [
       text,
-      variant === "primary" ? /* @__PURE__ */ jsx(ArrowSec, {}) : /* @__PURE__ */ jsx(ArrowPri, {})
+      variant === "primary" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowSec, {}) : /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowPri, {})
     ] });
   }
-  return /* @__PURE__ */ jsxs("button", { className, type, onClick, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { className, type, onClick, children: [
     text,
-    variant === "primary" ? /* @__PURE__ */ jsx(ArrowSec, {}) : /* @__PURE__ */ jsx(ArrowPri, {})
+    variant === "primary" ? /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowSec, {}) : /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowPri, {})
   ] });
 };
 

@@ -3,7 +3,7 @@ import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as M
 import 'clsx';
 import * as mime from 'mrmime';
 import 'kleur/colors';
-import '../renderers.mjs';
+import './_@astro-renderers_-GCoBMD8.mjs';
 
 const VALID_SUPPORTED_FORMATS = [
   "jpeg",
@@ -477,7 +477,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp_B_Q38qrG.mjs'
+      './sharp_C1_ynJik.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
