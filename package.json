@@ -1,0 +1,26 @@
+{
+  "name": "switchup-electrical-website",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^6.5.11",
+    "@astrojs/react": "^4.4.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/vercel": "^8.2.8",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "astro": "^5.14.1",
+    "framer-motion": "^10.16.4",
+    "react": "^18.2.0",
+    "react-countup": "^6.4.2",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3"
+  }
+}
